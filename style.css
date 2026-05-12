@@ -152,15 +152,16 @@ ul {
 }
 
 .logo {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--blue);
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Espaço entre o mascote e o texto */
+    text-decoration: none;
 }
 
-.logo span {
-    color: var(--yellow);
-    margin-left: 5px;
+.logo-img {
+    height: 50px; /* Altura ideal para caber na barra do topo */
+    width: auto;
+    object-fit: contain;
 }
 
 .nav-list {
@@ -860,20 +861,17 @@ ul {
 }
 
 /* =========================================
-   EFEITO GLITCH NO LOGO
+   EFEITO GLITCH NO LOGO (ATUALIZADO PARA IMAGENS)
 ========================================= */
-.logo:hover {
-    animation: glitch-anim 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
-    color: var(--white);
-    background: var(--black);
-    padding: 0 10px;
+.logo:hover .logo-img {
+    animation: glitch-anim-img 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
 }
 
-@keyframes glitch-anim {
-    0% { transform: translate(0); text-shadow: 2px 2px 0px red, -2px -2px 0px cyan; }
-    20% { transform: translate(-2px, 2px); text-shadow: -2px -2px 0px red, 2px 2px 0px cyan; }
-    40% { transform: translate(-2px, -2px); text-shadow: 2px -2px 0px red, -2px 2px 0px cyan; }
-    60% { transform: translate(2px, 2px); text-shadow: -2px 2px 0px red, 2px -2px 0px cyan; }
-    80% { transform: translate(2px, -2px); text-shadow: 2px 2px 0px red, -2px -2px 0px cyan; }
-    100% { transform: translate(0); text-shadow: -2px -2px 0px red, 2px 2px 0px cyan; }
+@keyframes glitch-anim-img {
+    0% { transform: translate(0); filter: drop-shadow(3px 3px 0px red) drop-shadow(-3px -3px 0px cyan); }
+    20% { transform: translate(-2px, 2px); filter: drop-shadow(-3px -3px 0px red) drop-shadow(3px 3px 0px cyan); }
+    40% { transform: translate(-2px, -2px); filter: drop-shadow(3px -3px 0px red) drop-shadow(-3px 3px 0px cyan); }
+    60% { transform: translate(2px, 2px); filter: drop-shadow(-3px 3px 0px red) drop-shadow(3px -3px 0px cyan); }
+    80% { transform: translate(2px, -2px); filter: drop-shadow(3px 3px 0px red) drop-shadow(-3px -3px 0px cyan); }
+    100% { transform: translate(0); filter: drop-shadow(-3px -3px 0px red) drop-shadow(3px 3px 0px cyan); }
 }
