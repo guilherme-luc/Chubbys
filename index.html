@@ -1,315 +1,290 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chubby’s Burger | Alma de Rua, Surf e Skate</title>
-    <!-- Fontes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
-    <!-- Ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Arquivo CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <!-- 1. Header -->
-    <header class="header" id="header">
-        <div class="container header-content">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Chubby’s Burger | Alma de Rua, Surf e Skate</title>
+      <!-- Fontes -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+      <!-- Ícones -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <!-- Arquivo CSS -->
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <!-- 1. Header -->
+      <header class="header" id="header">
+         <div class="container header-content">
             <a href="#" class="logo">
-                <img src="src/logo-mascote.png" alt="Mascote Chubby's" class="logo-img">
-                <img src="src/logo-texto.png" alt="Chubby's Burger" class="logo-img">
+            <img src="src/logo-mascote.png" alt="Mascote Chubby's" class="logo-img">
+            <img src="src/logo-texto.png" alt="Chubby's Burger" class="logo-img">
             </a>
-            
             <nav class="nav-menu" id="nav-menu">
-                <ul class="nav-list">
-                    <li><a href="#hero" class="nav-link">Início</a></li>
-                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
-                    <li><a href="#diferenciais" class="nav-link">Destaques</a></li>
-                    <li><a href="#cardapio" class="nav-link">Cardápio</a></li>
-                    <li><a href="#contato" class="nav-link">Contato</a></li>
-                </ul>
+               <ul class="nav-list">
+                  <li><a href="#hero" class="nav-link">Início</a></li>
+                  <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                  <li><a href="#diferenciais" class="nav-link">Destaques</a></li>
+                  <li><a href="#cardapio" class="nav-link">Cardápio</a></li>
+                  <li><a href="#contato" class="nav-link">Contato</a></li>
+               </ul>
             </nav>
-
             <a href="#mais-pedidos" class="btn btn-primary btn-header">Pedir Agora</a>
-            
             <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
-                <i class="fas fa-bars"></i>
+            <i class="fas fa-bars"></i>
             </button>
-        </div>
-    </header>
-
-    <!-- 2. Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-bg-elements"></div>
-        <div class="container hero-container fade-in">
+         </div>
+      </header>
+      <!-- 2. Hero Section -->
+      <section class="hero" id="hero">
+         <div class="hero-bg-elements"></div>
+         <div class="container hero-container fade-in">
             <div class="hero-text">
-                <h1>CHUBBY'S BURGER</h1>
-                <h2>Burger artesanal com alma de rua, surf e skate.</h2>
-                <p>Nascemos inspirados pela cultura do surf, do skate e da rua. Mas acima de tudo, nascemos com um propósito simples: fazer bem feito. No final, é sobre sabor, qualidade e a nossa essência.</p>
-                <div class="hero-buttons">
-                    <a href="#cardapio" class="btn btn-outline">Ver Cardápio</a>
-                    <a href="#mais-pedidos" class="btn btn-primary">Pedir Agora</a>
-                </div>
+               <h1>CHUBBY'S BURGER</h1>
+               <h2>Burger artesanal com alma de rua, surf e skate.</h2>
+               <p>Nascemos inspirados pela cultura do surf, do skate e da rua. Mas acima de tudo, nascemos com um propósito simples: fazer bem feito. No final, é sobre sabor, qualidade e a nossa essência.</p>
+               <div class="hero-buttons">
+                  <a href="#cardapio" class="btn btn-outline">Ver Cardápio</a>
+                  <a href="#mais-pedidos" class="btn btn-primary">Pedir Agora</a>
+               </div>
             </div>
             <div class="hero-image">
-    <img src="https://i.ibb.co/prPqTBwx/burguer.jpg" alt="Hambúrguer Artesanal Chubby's" class="img-destaque">
-</div>
-        </div>
-    </section>
-
-    <div class="marquee">
-        <div class="marquee-content">
-            <span>🍔 BURGER DE VERDADE</span>
-            <span>🛹 ALMA DE RUA</span>
-            <span>🌊 CULTURA SURF</span>
-            <span>🍔 BURGER DE VERDADE</span>
-            <span>🛹 ALMA DE RUA</span>
-            <span>🌊 CULTURA SURF</span>
-            <span>🍔 BURGER DE VERDADE</span>
-            <span>🛹 ALMA DE RUA</span>
-            <span>🌊 CULTURA SURF</span>
-        </div>
-    </div>
-
-    <!-- 3. Sobre a Chubby's -->
-    <section class="sobre" id="sobre">
-        <div class="container fade-in">
-            <div class="sobre-content">
-                <h3>A NOSSA ESSÊNCIA</h3>
-                <p>A Chubby’s Burger é feita para quem curte comida de verdade, sem frescura e com personalidade. Nossa essência vem da rua, do surf e do skate, mas o nosso compromisso está no preparo: ingredientes selecionados, hambúrguer bem montado e sabor que fala por si.</p>
-                
-                <div class="pilares">
-                    <div class="pilar">
-                        <i class="fas fa-fire"></i>
-                        <h4>Sabor de Verdade</h4>
-                    </div>
-                    <div class="pilar">
-                        <i class="fas fa-check-circle"></i>
-                        <h4>Qualidade no Preparo</h4>
-                    </div>
-                    <div class="pilar">
-                        <i class="fa-solid fa-person-skating"></i>
-                        <h4>Essência Urbana</h4>
-                    </div>
-                </div>
+               <img src="https://i.ibb.co/prPqTBwx/burguer.jpg" alt="Hambúrguer Artesanal Chubby's" class="img-destaque">
             </div>
-        </div>
-    </section>
-
-    <!-- 4. Diferenciais / Destaques -->
-    <section class="diferenciais" id="diferenciais">
-        <div class="container fade-in">
+         </div>
+      </section>
+      <div class="marquee">
+         <div class="marquee-content">
+            <span>🍔 BURGER DE VERDADE</span>
+            <span>🛹 ALMA DE RUA</span>
+            <span>🌊 CULTURA SURF</span>
+            <span>🍔 BURGER DE VERDADE</span>
+            <span>🛹 ALMA DE RUA</span>
+            <span>🌊 CULTURA SURF</span>
+            <span>🍔 BURGER DE VERDADE</span>
+            <span>🛹 ALMA DE RUA</span>
+            <span>🌊 CULTURA SURF</span>
+         </div>
+      </div>
+      <!-- 3. Sobre a Chubby's -->
+      <section class="sobre" id="sobre">
+         <div class="container fade-in">
+            <div class="sobre-content">
+               <h3>A NOSSA ESSÊNCIA</h3>
+               <p>A Chubby’s Burger é feita para quem curte comida de verdade, sem frescura e com personalidade. Nossa essência vem da rua, do surf e do skate, mas o nosso compromisso está no preparo: ingredientes selecionados, hambúrguer bem montado e sabor que fala por si.</p>
+               <div class="pilares">
+                  <div class="pilar">
+                     <i class="fas fa-fire"></i>
+                     <h4>Sabor de Verdade</h4>
+                  </div>
+                  <div class="pilar">
+                     <i class="fas fa-check-circle"></i>
+                     <h4>Qualidade no Preparo</h4>
+                  </div>
+                  <div class="pilar">
+                     <i class="fa-solid fa-person-snowboarding"></i>
+                     <h4>Essência Urbana</h4>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- 4. Diferenciais / Destaques -->
+      <section class="diferenciais" id="diferenciais">
+         <div class="container fade-in">
             <div class="section-header">
-                <h2>POR QUE CHUBBY'S?</h2>
+               <h2>POR QUE CHUBBY'S?</h2>
             </div>
             <div class="diferenciais-grid">
-                <div class="dif-card"><i class="fas fa-hamburger"></i><span>Burger Artesanal</span></div>
-                <div class="dif-card"><i class="fas fa-bread-slice"></i><span>Pão Brioche</span></div>
-                <div class="dif-card"><i class="fas fa-tint"></i><span>Blend Suculento</span></div>
-                <div class="dif-card"><i class="fas fa-mortar-pestle"></i><span>Molho da Casa</span></div>
-                <div class="dif-card"><i class="fas fa-box"></i><span>Combos Completos</span></div>
-                <div class="dif-card"><i class="fas fa-beer"></i><span>Bebidas Selecionadas</span></div>
+               <div class="dif-card"><i class="fas fa-hamburger"></i><span>Burger Artesanal</span></div>
+               <div class="dif-card"><i class="fas fa-bread-slice"></i><span>Pão Brioche</span></div>
+               <div class="dif-card"><i class="fas fa-tint"></i><span>Blend Suculento</span></div>
+               <div class="dif-card"><i class="fas fa-mortar-pestle"></i><span>Molho da Casa</span></div>
+               <div class="dif-card"><i class="fas fa-box"></i><span>Combos Completos</span></div>
+               <div class="dif-card"><i class="fas fa-beer"></i><span>Bebidas Selecionadas</span></div>
             </div>
-        </div>
-    </section>
-
-    <!-- 5. Mais Pedidos -->
-    <section class="mais-pedidos" id="mais-pedidos">
-        <div class="container fade-in">
+         </div>
+      </section>
+      <!-- 5. Mais Pedidos -->
+      <section class="mais-pedidos" id="mais-pedidos">
+         <div class="container fade-in">
             <div class="section-header">
-                <h2>OS MAIS PEDIDOS DA CASA</h2>
+               <h2>OS MAIS PEDIDOS DA CASA</h2>
             </div>
             <div class="pedidos-grid">
-                <!-- Card 1 -->
-                <div class="pedido-card">
-                    <span class="badge">O Chefe</span>
-                    <div class="pedido-info">
-                        <h3>Big Chubby’s Combo</h3>
-                        <p>Big Chubby’s + Batata 150g + Refri. 4 blends de 80g, cheddar, molho da casa e fritas.</p>
-                        <div class="pedido-footer">
-                            <span class="preco">R$ 62,90</span>
-                            <a href="https://wa.me/5527996446612?text=Quero%20um%20Big%20Chubby's%20Combo" target="_blank" class="btn btn-sm btn-primary">Pedir Esse</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="pedido-card">
-                    <span class="badge badge-yellow">Favorito</span>
-                    <div class="pedido-info">
-                        <h3>Chubby’s Bacon Combo</h3>
-                        <p>Chubby’s Bacon + Batata 150g + Refri. Bacon crocante, cheddar derretido e cebola caramelizada.</p>
-                        <div class="pedido-footer">
-                            <span class="preco">R$ 49,90</span>
-                            <a href="https://wa.me/5527996446612?text=Quero%20um%20Chubby's%20Bacon%20Combo" target="_blank" class="btn btn-sm btn-primary">Pedir Esse</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="pedido-card">
-                    <span class="badge badge-dark">Combo</span>
-                    <div class="pedido-info">
-                        <h3>Double Chubby’s Combo</h3>
-                        <p>Double Chubby’s + Batata 150g + Refri. Dois blends, molho cheddar, maionese e picles.</p>
-                        <div class="pedido-footer">
-                            <span class="preco">R$ 47,90</span>
-                            <a href="https://wa.me/5527996446612?text=Quero%20um%20Double%20Chubby's%20Combo" target="_blank" class="btn btn-sm btn-primary">Pedir Esse</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 4 -->
-                <div class="pedido-card">
-                    <span class="badge badge-dark">Clássico</span>
-                    <div class="pedido-info">
-                        <h3>Chubby’s Classic Combo</h3>
-                        <p>Chubby’s Classic + Batata 150g + Refri. Salada fresca, queijo cheddar e cebola roxa.</p>
-                        <div class="pedido-footer">
-                            <span class="preco">R$ 41,90</span>
-                            <a href="https://wa.me/5527996446612?text=Quero%20um%20Chubby's%20Classic%20Combo" target="_blank" class="btn btn-sm btn-primary">Pedir Esse</a>
-                        </div>
-                    </div>
-                </div>
+               <!-- Card 1 -->
+               <div class="pedido-card">
+                  <span class="badge">O Chefe</span>
+                  <div class="pedido-info">
+                     <h3>Big Chubby’s Combo</h3>
+                     <p>Big Chubby’s + Batata 150g + Refri. 4 blends de 80g, cheddar, molho da casa e fritas.</p>
+                     <div class="pedido-footer">
+                        <span class="preco">R$ 62,90</span>
+                        <a href="https://wa.me/5527996446612?text=Quero%20um%20Big%20Chubby's%20Combo" target="_blank" class="btn btn-sm btn-primary">Pedir Esse</a>
+                     </div>
+                  </div>
+               </div>
+               <!-- Card 2 -->
+               <div class="pedido-card">
+                  <span class="badge badge-yellow">Favorito</span>
+                  <div class="pedido-info">
+                     <h3>Chubby’s Bacon Combo</h3>
+                     <p>Chubby’s Bacon + Batata 150g + Refri. Bacon crocante, cheddar derretido e cebola caramelizada.</p>
+                     <div class="pedido-footer">
+                        <span class="preco">R$ 49,90</span>
+                        <a href="https://wa.me/5527996446612?text=Quero%20um%20Chubby's%20Bacon%20Combo" target="_blank" class="btn btn-sm btn-primary">Pedir Esse</a>
+                     </div>
+                  </div>
+               </div>
+               <!-- Card 3 -->
+               <div class="pedido-card">
+                  <span class="badge badge-dark">Combo</span>
+                  <div class="pedido-info">
+                     <h3>Double Chubby’s Combo</h3>
+                     <p>Double Chubby’s + Batata 150g + Refri. Dois blends, molho cheddar, maionese e picles.</p>
+                     <div class="pedido-footer">
+                        <span class="preco">R$ 47,90</span>
+                        <a href="https://wa.me/5527996446612?text=Quero%20um%20Double%20Chubby's%20Combo" target="_blank" class="btn btn-sm btn-primary">Pedir Esse</a>
+                     </div>
+                  </div>
+               </div>
+               <!-- Card 4 -->
+               <div class="pedido-card">
+                  <span class="badge badge-dark">Clássico</span>
+                  <div class="pedido-info">
+                     <h3>Chubby’s Classic Combo</h3>
+                     <p>Chubby’s Classic + Batata 150g + Refri. Salada fresca, queijo cheddar e cebola roxa.</p>
+                     <div class="pedido-footer">
+                        <span class="preco">R$ 41,90</span>
+                        <a href="https://wa.me/5527996446612?text=Quero%20um%20Chubby's%20Classic%20Combo" target="_blank" class="btn btn-sm btn-primary">Pedir Esse</a>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </section>
-
-    <!-- 6. Cardápio Completo -->
-    <section class="cardapio" id="cardapio">
-        <div class="container fade-in">
+         </div>
+      </section>
+      <!-- 6. Cardápio Completo -->
+      <section class="cardapio" id="cardapio">
+         <div class="container fade-in">
             <div class="section-header">
-                <h2>CARDÁPIO COMPLETO</h2>
+               <h2>CARDÁPIO COMPLETO</h2>
             </div>
-            
             <div class="menu-categoria">
-                <h3 class="cat-titulo">LANCHES</h3>
-                <div class="menu-items">
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <h4>Chubby’s Bacon</h4>
-                            <span class="item-preco">R$ 39,90</span>
-                        </div>
-                        <p>Pão brioche, maionese de alho, 2 blends de 80g, bacon, cheddar e cebola caramelizada.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <h4>Chubby’s Classic</h4>
-                            <span class="item-preco">R$ 32,90</span>
-                        </div>
-                        <p>Pão brioche, 2 blends de 80g, maionese, alface, tomate, queijo cheddar, cebola roxa e picles.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <h4>Double Chubby’s</h4>
-                            <span class="item-preco">R$ 36,90</span>
-                        </div>
-                        <p>Pão brioche, 2 blends de 80g, molho cheddar, maionese da casa e picles.</p>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <h4>Big Chubby’s</h4>
-                            <span class="item-preco">R$ 47,90</span>
-                        </div>
-                        <p>Pão brioche, 4 blends de 80g, cheddar e molho da casa.</p>
-                    </div>
-                </div>
+               <h3 class="cat-titulo">LANCHES</h3>
+               <div class="menu-items">
+                  <div class="menu-item">
+                     <div class="item-header">
+                        <h4>Chubby’s Bacon</h4>
+                        <span class="item-preco">R$ 39,90</span>
+                     </div>
+                     <p>Pão brioche, maionese de alho, 2 blends de 80g, bacon, cheddar e cebola caramelizada.</p>
+                  </div>
+                  <div class="menu-item">
+                     <div class="item-header">
+                        <h4>Chubby’s Classic</h4>
+                        <span class="item-preco">R$ 32,90</span>
+                     </div>
+                     <p>Pão brioche, 2 blends de 80g, maionese, alface, tomate, queijo cheddar, cebola roxa e picles.</p>
+                  </div>
+                  <div class="menu-item">
+                     <div class="item-header">
+                        <h4>Double Chubby’s</h4>
+                        <span class="item-preco">R$ 36,90</span>
+                     </div>
+                     <p>Pão brioche, 2 blends de 80g, molho cheddar, maionese da casa e picles.</p>
+                  </div>
+                  <div class="menu-item">
+                     <div class="item-header">
+                        <h4>Big Chubby’s</h4>
+                        <span class="item-preco">R$ 47,90</span>
+                     </div>
+                     <p>Pão brioche, 4 blends de 80g, cheddar e molho da casa.</p>
+                  </div>
+               </div>
             </div>
-
             <div class="menu-categoria">
-                <h3 class="cat-titulo">BEBIDAS</h3>
-                <div class="menu-items">
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <h4>Coca-Cola Lata</h4>
-                            <span class="item-preco">R$ 8,00</span>
-                        </div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <h4>Coca-Cola Zero Lata</h4>
-                            <span class="item-preco">R$ 8,00</span>
-                        </div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <h4>IPA</h4>
-                            <span class="item-preco">R$ 22,00</span>
-                        </div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-header">
-                            <h4>BÆr Mate</h4>
-                            <span class="item-preco">R$ 12,00</span>
-                        </div>
-                    </div>
-                </div>
+               <h3 class="cat-titulo">BEBIDAS</h3>
+               <div class="menu-items">
+                  <div class="menu-item">
+                     <div class="item-header">
+                        <h4>Coca-Cola Lata</h4>
+                        <span class="item-preco">R$ 8,00</span>
+                     </div>
+                  </div>
+                  <div class="menu-item">
+                     <div class="item-header">
+                        <h4>Coca-Cola Zero Lata</h4>
+                        <span class="item-preco">R$ 8,00</span>
+                     </div>
+                  </div>
+                  <div class="menu-item">
+                     <div class="item-header">
+                        <h4>IPA</h4>
+                        <span class="item-preco">R$ 22,00</span>
+                     </div>
+                  </div>
+                  <div class="menu-item">
+                     <div class="item-header">
+                        <h4>BÆr Mate</h4>
+                        <span class="item-preco">R$ 12,00</span>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </section>
-
-    <!-- 7. CTA Emocional -->
-    <section class="cta" id="cta">
-        <div class="container fade-in">
+         </div>
+      </section>
+      <!-- 7. CTA Emocional -->
+      <section class="cta" id="cta">
+         <div class="container fade-in">
             <h2>Não é só burger. É rua, sabor e essência.</h2>
             <p>Cada Chubby’s é feito para entregar aquilo que importa: sabor marcante, qualidade no preparo e uma experiência com personalidade.</p>
             <a href="https://wa.me/5527996446612" target="_blank" class="btn btn-primary btn-large">Fazer Meu Pedido</a>
-        </div>
-    </section>
-
-    <!-- 8. Contato -->
-    <section class="contato" id="contato">
-        <div class="container fade-in">
+         </div>
+      </section>
+      <!-- 8. Contato -->
+      <section class="contato" id="contato">
+         <div class="container fade-in">
             <div class="contato-grid">
-                <div class="contato-info">
-                    <h3>COLA AÍ OU PEÇA EM CASA</h3>
-                    <p class="aviso">Cardápio sujeito a alterações sem aviso prévio.</p>
-                    
-                    <ul class="info-list">
-                        <li><i class="fas fa-map-marker-alt"></i> <span>📍 Praia do Morro | Guarapari-ES</span></li>
-                        <li><i class="fas fa-clock"></i> <span>Segunda a Domingo - 18h às 00h</span></li>
-                    </ul>
-
-                    <div class="redes">
-                        <a href="https://wa.me/5527996446612" target="_blank" class="btn-rede whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-                        <a href="https://www.instagram.com/chubbysburger.oficial/" target="_blank" class="btn-rede instagram"><i class="fab fa-instagram"></i> Instagram</a>
-                    </div>
-                </div>
-                
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14940.612089454808!2d-40.4950451!3d-20.6622692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xb8564177b8b2cb%3A0xc6cf60b0d3e098cb!2sPraia%20do%20Morro%2C%20Guarapari%20-%20ES!5e0!3m2!1spt-BR!2sbr!4v1715000000000!5m2!1spt-BR!2sbr" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-
+               <div class="contato-info">
+                  <h3>COLA AÍ OU PEÇA EM CASA</h3>
+                  <p class="aviso">Cardápio sujeito a alterações sem aviso prévio.</p>
+                  <ul class="info-list">
+                     <li><i class="fas fa-map-marker-alt"></i> <span>📍 Praia do Morro | Guarapari-ES</span></li>
+                     <li><i class="fas fa-clock"></i> <span>Segunda a Domingo - 18h às 00h</span></li>
+                  </ul>
+                  <div class="redes">
+                     <a href="https://wa.me/5527996446612" target="_blank" class="btn-rede whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                     <a href="https://www.instagram.com/chubbysburger.oficial/" target="_blank" class="btn-rede instagram"><i class="fab fa-instagram"></i> Instagram</a>
+                  </div>
+               </div>
+               
             </div>
-        </div>
-    </section>
-
-    <!-- 9. Footer -->
-    <footer class="footer">
-        <div class="container">
+         </div>
+      </section>
+      <!-- 9. Footer -->
+      <footer class="footer">
+         <div class="container">
             <div class="footer-content">
-                <div class="footer-brand">
-                    <h2>CHUBBY'S BURGER</h2>
-                    <p>Burger artesanal com essência de rua.</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#hero">Início</a>
-                    <a href="#sobre">Sobre</a>
-                    <a href="#cardapio">Cardápio</a>
-                </div>
+               <div class="footer-brand">
+                  <h2>CHUBBY'S BURGER</h2>
+                  <p>Burger artesanal com essência de rua.</p>
+               </div>
+               <div class="footer-links">
+                  <a href="#hero">Início</a>
+                  <a href="#sobre">Sobre</a>
+                  <a href="#cardapio">Cardápio</a>
+               </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Chubby's Burger. Todos os direitos reservados.</p>
+               <p>&copy; 2026 Chubby's Burger. Todos os direitos reservados.</p>
             </div>
-        </div>
-    </footer>
-
-    <!-- Arquivo JS -->
-
-    <a href="https://wa.me/5527996446612" target="_blank" class="btn-flutuante">
-        <i class="fab fa-whatsapp"></i> Fazer Pedido
-    </a>
-
-    <script src="script.js"></script>
-</body>
+         </div>
+      </footer>
+      <!-- Arquivo JS -->
+      <a href="https://wa.me/5527996446612" target="_blank" class="btn-flutuante">
+      <i class="fab fa-whatsapp"></i> Fazer Pedido
+      </a>
+      <script src="script.js"></script>
+   </body>
 </html>
