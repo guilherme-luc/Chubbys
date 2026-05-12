@@ -1,0 +1,879 @@
+/* 1. Declarando a fonte baixada */
+@font-face {
+    font-family: 'ChubbysCustomFont'; /* Nome que você dará para usar no código */
+    src: url('fonts/panton-rust-heavy-base.ttf') format('truetype'); /* Ajuste o nome do arquivo e o formato */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* =========================================
+   VARIÁVEIS DE CORES & FONTES
+========================================= */
+:root {
+    --blue: #3065db;       
+    --blue-dark: #1e44a3;  /* Cor para as sombras sólidas */
+    --cream: #F8F5F0;      
+    --yellow: #ffee8c;     
+    --black: #111827;      
+    --gray: #4B5563;
+    --white: #FFFFFF;
+    
+    --font-heading: 'ChubbysCustomFont', sans-serif; 
+    --font-body: 'Inter', sans-serif; 
+    
+    --transition: all 0.3s ease;
+}
+
+/* =========================================
+   RESET E BASE
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--cream);
+    background-image: url('https://www.transparenttextures.com/patterns/pinstriped-suit.png'); /* Textura urbana sutil */
+    color: var(--black);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 0px var(--blue-dark); /* Sombra apenas em títulos grandes */
+}
+
+h4 {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    text-shadow: none; /* Sombra removida para facilitar a leitura */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =========================================
+   BOTÕES
+========================================= */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: center;
+    border: 2px solid var(--black); /* Borda forte */
+    box-shadow: 4px 4px 0px var(--black); /* Sombra forte */
+    text-shadow: none; /* Remove a sombra do texto dentro do botão */
+}
+
+.btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px var(--black);
+}
+
+.btn-primary {
+    background-color: var(--yellow);
+    color: var(--black);
+}
+
+.btn-primary:hover {
+    background-color: #ffe134;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--blue);
+    border-color: var(--blue);
+}
+
+.btn-outline:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+}
+
+.btn-large {
+    padding: 16px 40px;
+    font-size: 1.3rem;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+.header {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--blue);
+}
+
+.logo span {
+    color: var(--yellow);
+    margin-left: 5px;
+}
+
+.nav-list {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-link {
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--yellow);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--blue);
+    cursor: pointer;
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
+.hero {
+    padding: 140px 0 80px;
+    position: relative;
+    background-color: var(--blue);
+    color: var(--white);
+    overflow: hidden;
+}
+
+/* Textura urbana (simulada com gradiente e shapes) */
+.hero-bg-elements {
+    position: absolute;
+    top: -50px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(245,158,11,0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 4.5rem;
+    color: var(--yellow);
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.hero-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--cream);
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #E5E7EB;
+    max-width: 90%;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.hero-buttons .btn-outline {
+    border-color: var(--white);
+    color: var(--white);
+}
+
+.hero-buttons .btn-outline:hover {
+    background-color: var(--white);
+    color: var(--blue);
+}
+
+.img-destaque {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    /* Sombra preta dura e sem desfoque (estilo pop-art/revista) */
+    filter: drop-shadow(12px 12px 0px rgba(17, 24, 39, 1)); 
+    transform: rotate(-3deg); /* Leve inclinação orgânica */
+    transition: var(--transition);
+}
+
+.img-destaque:hover {
+    transform: scale(1.05) rotate(0deg);
+}
+
+.image-placeholder {
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    background-color: rgba(255,255,255,0.1);
+    border: 3px dashed var(--yellow);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--yellow);
+    font-size: 1.2rem;
+    gap: 15px;
+}
+
+.image-placeholder i {
+    font-size: 4rem;
+}
+
+/* =========================================
+   SOBRE
+========================================= */
+.sobre {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--white);
+}
+
+.sobre-content h3 {
+    font-size: 2.5rem;
+    color: var(--blue);
+    margin-bottom: 20px;
+}
+
+.sobre-content p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    color: var(--gray);
+}
+
+.pilares {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.pilar i {
+    font-size: 3rem;
+    color: var(--blue); /* Trocado de yellow para blue para contraste máximo */
+    margin-bottom: 15px;
+}
+
+.pilar h4 {
+    font-size: 1.2rem;
+    color: var(--black);
+}
+
+/* =========================================
+   DESTAQUES / DIFERENCIAIS
+========================================= */
+.diferenciais {
+    padding: 80px 0;
+    background-color: var(--cream);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2.8rem;
+    color: var(--blue);
+    position: relative;
+    display: inline-block;
+    z-index: 1; /* Garante que o texto fique por cima da marcação */
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: -5%;
+    width: 110%;
+    height: 40%;
+    background-color: var(--yellow);
+    z-index: -1; /* Joga o amarelo para trás do texto */
+    transform: rotate(-2deg); /* Deixa a marcação levemente torta, estilo rua */
+}
+
+.diferenciais-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.dif-card {
+    background: var(--white);
+    padding: 30px 20px;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    text-align: center;
+    border: 2px solid var(--black);
+    box-shadow: 6px 6px 0px var(--blue);
+    transition: var(--transition);
+}
+
+.dif-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 10px 10px 0px var(--yellow);
+}
+
+.dif-card i {
+    font-size: 2.5rem;
+    color: var(--blue);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.dif-card span {
+    font-weight: 600;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+/* =========================================
+   MAIS PEDIDOS
+========================================= */
+.mais-pedidos {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.pedidos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.pedido-card {
+    background: var(--white);
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    padding: 25px;
+    position: relative;
+    border: 2px solid var(--black);
+    box-shadow: 8px 8px 0px var(--blue);
+    transition: var(--transition);
+}
+
+.pedido-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 12px 12px 0px var(--yellow);
+}
+
+.badge {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 20px;
+}
+
+.badge-yellow { background-color: var(--yellow); color: var(--black); }
+.badge-dark { background-color: var(--black); }
+
+.pedido-info h3 {
+    font-size: 1.6rem;
+    color: var(--blue);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.pedido-info p {
+    font-size: 0.95rem;
+    color: var(--gray);
+    margin-bottom: 20px;
+    min-height: 70px;
+}
+
+.pedido-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #E5E7EB;
+    padding-top: 15px;
+}
+
+.preco {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--black);
+    font-weight: 700;
+}
+
+/* =========================================
+   CARDÁPIO COMPLETO
+========================================= */
+.cardapio {
+    padding: 80px 0;
+    background-color: var(--cream);
+}
+
+.menu-categoria {
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cat-titulo {
+    font-size: 2rem;
+    color: var(--blue);
+    border-bottom: 2px solid var(--yellow);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.menu-item {
+    margin-bottom: 25px;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    /* Linha grossa azul escura pontilhada */
+    border-bottom: 4px dotted var(--blue-dark); 
+    margin-bottom: 8px;
+}
+
+.item-header h4 {
+    font-size: 1.3rem;
+    color: var(--black);
+    background-color: var(--cream);
+    padding-right: 10px;
+}
+
+.item-preco {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--blue);
+    background-color: var(--cream);
+    padding-left: 10px;
+}
+
+.menu-item p {
+    font-size: 0.95rem;
+    color: var(--gray);
+}
+
+/* =========================================
+   CTA EMOCIONAL
+========================================= */
+.cta {
+    padding: 100px 0;
+    /* Imagem atualizada funcionando + gradiente com a sua cor azul */
+    background: linear-gradient(rgba(48, 101, 219, 0.85), rgba(17, 24, 39, 0.9)), url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1920&auto=format&fit=crop') center/cover;
+    background-attachment: fixed; /* Dá um efeito parallax bem legal */
+    text-align: center;
+    color: var(--white);
+}
+
+.cta h2 {
+    font-size: 3.5rem;
+    color: var(--yellow);
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+/* =========================================
+   CONTATO
+========================================= */
+.contato {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.contato-info {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contato-info h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: var(--blue);
+}
+
+.aviso {
+    font-size: 0.9rem;
+    color: #9CA3AF;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.info-list {
+    margin-bottom: 40px;
+}
+
+.info-list li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.info-list i {
+    color: var(--yellow);
+    font-size: 1.3rem;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-rede {
+    padding: 12px 25px;
+    border-radius: 4px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition);
+    color: var(--white);
+}
+
+.whatsapp { background-color: #25D366; }
+.whatsapp:hover { background-color: #128C7E; transform: translateY(-2px); }
+
+.instagram { background-color: #E1306C; }
+.instagram:hover { background-color: #C13584; transform: translateY(-2px); }
+
+/* =========================================
+   FOOTER
+========================================= */
+.footer {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 40px 0 20px;
+    text-align: center;
+}
+
+.footer-brand h2 {
+    color: var(--yellow);
+    margin-bottom: 5px;
+}
+
+.footer-brand p {
+    color: #9CA3AF;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.footer-links a:hover {
+    color: var(--yellow);
+}
+
+.footer-bottom {
+    /* Fita amarela tracejada */
+    border-top: 4px dashed var(--yellow); 
+    padding-top: 20px;
+    font-size: 0.9rem;
+    color: #6B7280;
+}
+
+/* =========================================
+   RESPONSIVIDADE (MOBILE)
+========================================= */
+@media (max-width: 992px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-text h1 { font-size: 3.5rem; }
+    
+    /* Essa regra empurra a caixa de texto perfeitamente para o meio no celular */
+    .hero-text p { 
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .pilares {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* 1. Header e Menu fáceis de clicar com o dedo */
+    .btn-header { display: none; }
+    .menu-toggle { display: block; font-size: 1.8rem; }
+    
+    .nav-menu {
+        position: fixed; /* Evita que o menu suma ao rolar a tela */
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px); /* Ocupa o resto da tela */
+        background-color: var(--white);
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: 0.3s;
+        overflow-y: auto;
+        z-index: 999;
+    }
+    
+    .nav-menu.active { left: 0; }
+    
+    .nav-list {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 0;
+        gap: 30px;
+    }
+    
+    .nav-link { font-size: 1.3rem; display: block; padding: 10px; } /* Maior área de toque */
+
+    /* 2. Redução de espaços em branco (reduz a fadiga de rolar a tela) */
+    .hero { padding: 120px 0 60px; }
+    .hero-text h1 { font-size: 3rem; }
+    .hero-text h2 { font-size: 1.4rem; }
+    .sobre, .diferenciais, .mais-pedidos, .cardapio, .contato { padding: 50px 0; }
+    
+    .section-header h2 { font-size: 2.2rem; }
+    .cat-titulo { font-size: 1.6rem; }
+    
+    /* 3. Cards lado a lado (2 colunas) em vez de 1 gigante */
+    .diferenciais-grid { grid-template-columns: 1fr 1fr; gap: 15px; }
+    .dif-card { padding: 20px 10px; }
+    .dif-card i { font-size: 2rem; }
+    
+    /* 4. Botões de contato ocupando 100% da tela */
+    .cta h2 { font-size: 2.2rem; }
+    .redes { flex-direction: column; width: 100%; }
+    .btn-rede { justify-content: center; width: 100%; }
+}
+
+/* =========================================
+   BOTÃO FLUTUANTE DE PEDIDO (MOBILE)
+========================================= */
+.btn-flutuante {
+    display: none; /* Fica oculto no PC */
+}
+
+@media (max-width: 768px) {
+    .btn-flutuante {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        background-color: #25D366; /* Verde do WhatsApp */
+        color: var(--white);
+        padding: 15px 0;
+        /* Mesma borda desenhada à mão da identidade visual */
+        border-radius: 255px 15px 225px 15px/15px 225px 15px 255px; 
+        font-family: var(--font-heading);
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+        box-shadow: 6px 6px 0px var(--black);
+        border: 2px solid var(--black);
+        z-index: 1000;
+    }
+
+    .btn-flutuante:active {
+        transform: translate(calc(-50% + 2px), 2px);
+        box-shadow: 0px 0px 0px var(--black);
+    }
+    
+    /* Empurra o rodapé um pouco para cima para o botão flutuante não tampar os textos */
+    .footer { padding-bottom: 90px; }
+}
+
+/* =========================================
+   ANIMAÇÕES (JS Reveal)
+========================================= */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================
+   ESTÉTICA ANALÓGICA E SCROLLBAR
+========================================= */
+::selection { background: var(--yellow); color: var(--black); }
+
+::-webkit-scrollbar { width: 14px; }
+::-webkit-scrollbar-track { background: var(--cream); border-left: 3px solid var(--black); }
+::-webkit-scrollbar-thumb { background: var(--blue); border: 3px solid var(--black); }
+::-webkit-scrollbar-thumb:hover { background: var(--yellow); }
+
+/* =========================================
+   LETREIRO ROTATIVO (MARQUEE)
+========================================= */
+.marquee {
+    background-color: var(--black);
+    color: var(--yellow);
+    padding: 12px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border-top: 4px solid var(--black);
+    border-bottom: 4px solid var(--black);
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: scroll-marquee 15s linear infinite;
+}
+
+.marquee-content span {
+    margin: 0 30px;
+}
+
+@keyframes scroll-marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-33.33%); }
+}
+
+/* =========================================
+   MAPA COM FILTRO URBANO
+========================================= */
+.contato-grid {
+    display: grid;
+    gap: 40px;
+}
+
+.map-container {
+    border: 4px solid var(--black);
+    box-shadow: 8px 8px 0px var(--blue);
+    border-radius: 12px;
+    overflow: hidden;
+    /* Deixa o mapa meio cinza e com contraste alto (estilo asfalto) */
+    filter: grayscale(60%) contrast(120%); 
+    transition: var(--transition);
+}
+
+.map-container:hover {
+    /* Revela as cores originais do mapa ao passar o mouse */
+    filter: grayscale(0%) contrast(100%);
+    transform: translate(-4px, -4px);
+    box-shadow: 12px 12px 0px var(--yellow);
+}
+
+/* =========================================
+   EFEITO GLITCH NO LOGO
+========================================= */
+.logo:hover {
+    animation: glitch-anim 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+    color: var(--white);
+    background: var(--black);
+    padding: 0 10px;
+}
+
+@keyframes glitch-anim {
+    0% { transform: translate(0); text-shadow: 2px 2px 0px red, -2px -2px 0px cyan; }
+    20% { transform: translate(-2px, 2px); text-shadow: -2px -2px 0px red, 2px 2px 0px cyan; }
+    40% { transform: translate(-2px, -2px); text-shadow: 2px -2px 0px red, -2px 2px 0px cyan; }
+    60% { transform: translate(2px, 2px); text-shadow: -2px 2px 0px red, 2px -2px 0px cyan; }
+    80% { transform: translate(2px, -2px); text-shadow: 2px 2px 0px red, -2px -2px 0px cyan; }
+    100% { transform: translate(0); text-shadow: -2px -2px 0px red, 2px 2px 0px cyan; }
+}
