@@ -1175,3 +1175,20 @@ body,
     }
     .f1, .f2, .f3 { transform: rotate(0deg); margin-top: 0; }
 }
+
+/* =========================================
+   AJUSTE DE PREÇO NO CELULAR (NÃO QUEBRAR LINHA)
+========================================= */
+.item-header {
+    gap: 15px; /* Garante um espacinho mínimo entre o nome e o preço */
+}
+
+.item-preco {
+    white-space: nowrap !important; /* Impede o R$ de separar do número */
+    flex-shrink: 0 !important; /* Impede que o preço seja esmagado pelo nome */
+}
+
+.item-header h4 {
+    flex: 1; /* Permite que o nome do item ocupe o espaço e quebre de linha livremente */
+    word-break: break-word;
+}
