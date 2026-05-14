@@ -51,3 +51,30 @@ document.addEventListener('DOMContentLoaded', () => {
     // Roda toda vez que o usuário dá scroll
     window.addEventListener('scroll', fadeInOnScroll);
 });
+
+/* =========================================
+   LAZY PLAY DO VÍDEO (SKATE & BURGER)
+========================================= */
+document.addEventListener("DOMContentLoaded", function() {
+    const videoSkate = document.getElementById('video-promo');
+
+    if (videoSkate) {
+        // Pausa o vídeo logo que o site carrega para ele não rodar escondido
+        videoSkate.pause();
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Quando aparece na tela, dá o play
+                    videoSkate.play().catch(error => console.log("Erro de play:", error));
+                } else {
+                    // Quando sai da tela, pausa e volta para o começo (0:00)
+                    videoSkate.pause();
+                    videoSkate.currentTime = 0; 
+                }
+            });
+        }, { threshold: 0.2 }); // Dispara quando 20% do vídeo aparecer
+
+        observer.observe(videoSkate);
+    }
+});
